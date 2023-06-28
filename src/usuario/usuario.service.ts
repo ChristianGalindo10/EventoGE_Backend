@@ -105,7 +105,7 @@ export class UsuarioService {
         .where("user.activo = :activo", { activo: true })
         .getCount()
       const countN = await this.usuarioRepo.createQueryBuilder("user")
-        .where("user.activo = :activo", { activo: true })
+        .where("user.activo = :activo", { activo: false })
         .getCount()
       const total = await this.usuarioRepo.createQueryBuilder("user").getCount()
       const datos = {
