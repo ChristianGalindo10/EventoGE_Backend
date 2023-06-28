@@ -1,4 +1,5 @@
 import { Type } from 'class-transformer';
+import { PartialType } from '@nestjs/swagger';
 import {
   IsBoolean,
   IsDate,
@@ -32,6 +33,10 @@ export class CreateUsuarioDto {
   @IsNotEmpty()
   @IsString()
   readonly correo: string;
+
+  @IsNotEmpty()
+  @IsBoolean()
+  readonly activo: boolean;
 }
 
 // export class FilterUsersDto {
@@ -42,3 +47,5 @@ export class CreateUsuarioDto {
 //   @Min(0)
 //   offset: number;
 // }
+
+export class UpdateUsuarioDto extends PartialType(CreateUsuarioDto) {}

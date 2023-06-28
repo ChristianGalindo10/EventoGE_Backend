@@ -27,6 +27,9 @@ import {
     
     @Column({ type: 'varchar', length: 50 })
     correo: string;
+
+    @Column({ type: 'boolean' })
+    activo: boolean;
     
   }
   
