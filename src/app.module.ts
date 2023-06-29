@@ -7,8 +7,6 @@ import * as Joi from 'joi';
 
 import { DatabaseModule } from './database/database.module';
 import { UsuarioModule } from './usuario/usuario.module';
-import { UsuarioService } from './usuario/usuario.service';
-import { UsuarioController } from './usuario/usuario.controller';
 import config from './config';
 
 @Module({

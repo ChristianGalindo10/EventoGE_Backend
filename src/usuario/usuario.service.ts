@@ -1,5 +1,4 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import { ConfigType } from '@nestjs/config';
 import { Repository } from 'typeorm/repository/Repository';
 
 import { Usuario } from './usuario.entity';
